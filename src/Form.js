@@ -1,4 +1,4 @@
-function Form({ btnSubmit, setName, setAge, setCity }) {
+function Form({ btnSubmit, setName, setAge, setCity, register }) {
   return (
     <form>
       <input
@@ -21,7 +21,12 @@ function Form({ btnSubmit, setName, setAge, setCity }) {
       />
 
       {btnSubmit ? (
-        <input type="button" value="Submit" className="btn btn-primary" />
+        <input
+          type="button"
+          value="Submit"
+          className="btn btn-primary"
+          onClick={register}
+        />
       ) : (
         <div>
           <input type="button" value="Save" className="btn btn-secondary" />
