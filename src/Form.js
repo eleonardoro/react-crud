@@ -1,9 +1,24 @@
-function Form({ btnSubmit }) {
+function Form({ btnSubmit, setName, setAge, setCity }) {
   return (
     <form>
-      <input type="text" placeholder="Name" className="form-control" />
-      <input type="text" placeholder="Age" className="form-control" />
-      <input type="text" placeholder="City" className="form-control" />
+      <input
+        type="text"
+        placeholder="Name"
+        className="form-control"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Age"
+        className="form-control"
+        onChange={(e) => setAge(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="City"
+        className="form-control"
+        onChange={(e) => setCity(e.target.value)}
+      />
 
       {btnSubmit ? (
         <input type="button" value="Submit" className="btn btn-primary" />
